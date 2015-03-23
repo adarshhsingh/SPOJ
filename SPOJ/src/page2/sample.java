@@ -1,0 +1,4 @@
+package page2;
+
+import java.io.*;
+class sample {	public static void main(String[] args) throws Exception { BufferedReader br = new BufferedReader(new InputStreamReader(System.in));	int t = Integer.parseInt(br.readLine());while(t-- > 0){ int l = Integer.parseInt(br.readLine());String inp[];int arr[][]=new int[l][l];int max = arr[0][0]= Integer.parseInt(br.readLine());for(int i=1;i<l;i++) { inp=br.readLine().split(" ");arr[i][0]=Integer.parseInt(inp[0])+arr[i-1][0];for(int j=1;j<inp.length;j++) {arr[i][j]=Integer.parseInt(inp[j])+Math.max(arr[i-1][j],arr[i-1][j-1]);max = Math.max(arr[i][j],max);}}System.out.println(max);}}}
